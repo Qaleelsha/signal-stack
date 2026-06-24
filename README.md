@@ -68,51 +68,28 @@ Open [http://localhost:3000](http://localhost:3000)
 
 ## How It Works
 User types company name
-
 │
-
 ▼
-
 Next.js Frontend
-
 │
-
 │  GET /api/research?company=X  (SSE stream)
-
 ▼
-
 Express Backend
-
 │
-
 ▼
-
 LangGraph StateGraph
-
 │
-
 ┌────┴─────────────────────┐
-
 │    parallel fan-out      │
-
 ▼    ▼    ▼    ▼           │
-
-news  fin  moat  risks       │
-
+news  fin  moat  risks     │
 │    │    │    │           │
-
 └────┴────┴────┘           │
-
-│               │
-
-▼               │
-
+│              │
+▼              │
 verdict ──────────┘
-
 │
-
 │  SSE events stream back per node
-
 ▼
 
 Frontend updates live
