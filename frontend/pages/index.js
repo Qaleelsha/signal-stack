@@ -329,8 +329,10 @@ export default function Home() {
         )}
 
         <footer style={{ textAlign: "center", fontSize: 12, color: "#334155", paddingTop: 40, fontFamily: "monospace" }}>
-          Built with LangGraph.js + Gemini 2.5 Flash · Not financial advice
-        </footer>
+  Built with LangGraph.js + Gemini 2.5 Flash · Not financial advice
+  <br />
+  <span style={{ marginTop: 6, display: "inline-block" }}>©Qaleel Sha Backer</span>
+</footer>
       </div>
 
       <style>{`
