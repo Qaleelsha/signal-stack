@@ -93,10 +93,10 @@ User types company name
          │
          ├──────────────────────────────────┐
          │         parallel fan-out         │
-         ▼         ▼         ▼         ▼   │
+         ▼         ▼         ▼         ▼    │
       [news]  [financials] [moat]  [risks]  │
-         │         │         │         │   │
-         └────────┬┘         └────┬────┘   │
+         │         │         │         │    │
+         └────────┬┘         └────┬────┘    │
                   │               │         │
                   └───────┬───────┘         │
                           ▼                 │
@@ -246,19 +246,6 @@ signal-stack/
 | AI Orchestration | LangGraph.js StateGraph (parallel fan-out pattern) |
 | LLM | Google Gemini 2.5 Flash via @langchain/google-genai |
 | Deployment | Vercel (frontend) · Render (backend) |
-
----
-
-## Bonus — LLM Chat Session
-
-This project was built in a live conversation with Claude (Anthropic), using it as a thought partner for every architectural decision — from choosing LangGraph over a plain chain, to the SSE streaming approach, to the weighted scoring formula. The full conversation transcript is included in the zip submission as `llm-chat-transcript.pdf`.
-
-Key decisions made in conversation:
-- **LangGraph fan-out pattern** — discussed why parallel nodes beat sequential chains for latency
-- **SSE vs WebSocket** — reasoned through statefulness, directionality, and Vercel compatibility  
-- **Gemini 2.5 Flash** — evaluated free tier limits (1500 req/day) vs GPT-4o cost
-- **Weighted scoring** — iterated on the 35/30/20/15 weighting logic with reasoning
-- **Node naming conflict** — debugged LangGraph v1.4 constraint where node names can't match state channel names
 
 ---
 
